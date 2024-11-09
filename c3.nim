@@ -2,6 +2,10 @@ import nimib, p5
 nbInit
 nbUseP5
 
+nbText "previous [c2](c2.html)"
+nbText "yet another circle joins the first two circles. The three circles have a lot of fun together"
+nbText "they have so much fun that they decide to look for another circle to join."
+nbText "next [c4](c4.html)"
 nbJsFromCode:
   const
     lightBlue = "#02A4BD"
@@ -20,7 +24,6 @@ nbJsFromCode:
     circle(x, y, sizeCircle*3)
     fill(orange)
     let deltaX = sizeCircle*0.6
-    noStroke()
     circle(x -  deltaX, y, sizeCircle)    
     circle(x +  deltaX, y, sizeCircle)    
 
@@ -35,25 +38,12 @@ nbJsFromCode:
     circle(x +  deltaX, y + deltaY2, sizeCircle)    
     circle(x, y - deltaY + deltaY2, sizeCircle)    
 
-  proc bigCircle4(x, y: float) =
-    fill(aColor)
-    circle(x, y, sizeCircle*6)
-    fill(orange)
-    let deltaX = sizeCircle*0.6
-    let deltaY = sizeCircle*1.5
-    let deltaY2 = deltaY*0.6
-    circle(x -  deltaX, y + deltaY, sizeCircle)    
-    circle(x +  deltaX, y + deltaY, sizeCircle)    
-    stroke(lightBlue)
-    bigCircle2(x, y - deltaY2)
-
   setup:
 
     createCanvas(sizeCanvas, sizeCanvas)
     background(lightBlue) # light blue
-    strokeWeight(4)
     noStroke()
     fill(orange)
-    bigCircle4(midCanvas, midCanvas)
+    bigCircle3(midCanvas, midCanvas)
 
 nbSave
