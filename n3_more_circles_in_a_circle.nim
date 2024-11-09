@@ -23,12 +23,23 @@ nbJsFromCode:
     circle(x -  deltaX, y, sizeCircle)    
     circle(x +  deltaX, y, sizeCircle)    
 
+  proc bigCircle3(x, y: float) =
+    fill(aColor)
+    circle(x, y, sizeCircle*3.5)
+    fill(orange)
+    let deltaX = sizeCircle*0.6
+    let deltaY = sizeCircle*0.9
+    let deltaY2 = deltaY / 2
+    circle(x -  deltaX, y + deltaY2, sizeCircle)    
+    circle(x +  deltaX, y + deltaY2, sizeCircle)    
+    circle(x, y - deltaY + deltaY2, sizeCircle)    
+
   setup:
 
     createCanvas(sizeCanvas, sizeCanvas)
     background(lightBlue) # light blue
     noStroke()
     fill(orange)
-    bigCircle2(midCanvas, midCanvas)
+    bigCircle3(midCanvas, midCanvas)
 
 nbSave

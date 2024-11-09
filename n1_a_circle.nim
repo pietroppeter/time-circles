@@ -2,7 +2,7 @@ import nimib, p5
 nbInit
 nbUseP5
 
-nbCodeDisplay(nbJsFromCode):
+nbJsFromCode:
   const
     lightBlue = "#02A4BD"
     orange = "#ee961a"
