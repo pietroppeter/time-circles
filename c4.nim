@@ -4,7 +4,8 @@ nbUseP5
 
 nbText "previous [c3](c3.html)"
 nbText "the circles decided to organize themselves"
-nbText "the fourth circle will work in a circle inside the big circle with the first circle"
+nbText "the fourth circle will work with the first circle"
+nbText "the two circles will make their own circle inside the big circle"
 nbText "what is this [about](index.html)?"
 nbJsFromCode:
   const
